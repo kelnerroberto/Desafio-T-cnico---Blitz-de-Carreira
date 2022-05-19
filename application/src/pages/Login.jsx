@@ -1,8 +1,11 @@
+import { Flex } from '@chakra-ui/layout';
 import React from 'react';
-import PageGeneral from '../components/login/PageGeneral';
+import FormCard from '../components/login/FormCard';
 
 export default function Login() {
   return (
-    <PageGeneral />
+    <Flex height='100vh' alignItems='center' justifyContent='center'>
+      <FormCard />
+    </Flex>
   )
 }
