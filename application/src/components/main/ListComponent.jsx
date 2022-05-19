@@ -7,9 +7,7 @@ export default function ListComponent() {
   const { todos, setToDos } = useContext(ToDoContext);
 
   const deleteToDo = (id) => {
-    const newToDoList = todos.filter(eachOfList => {
-      eachOfList.id !== id
-    });
+    const newToDoList = todos.filter((eachOfList) => eachOfList.id !== id);
     setToDos(newToDoList);
   }
 
@@ -33,7 +31,7 @@ export default function ListComponent() {
             <IconButton
               icon={<FaTrash />}
               isRound='true'
-              onClick={ () => deleteToDo() } 
+              onClick={ () => deleteToDo(todo.id) } 
             />
           </HStack>
         ))

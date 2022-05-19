@@ -10,6 +10,7 @@ export default function AddToList() {
     const newTaskToAdd = { id: todos.length + 1, body: task };
     const newArrayOfTodos = [...todos, newTaskToAdd];
     setToDos(newArrayOfTodos);
+    localStorage.setItem('todoList', JSON.stringify(newArrayOfTodos));
   }
 
   return(
