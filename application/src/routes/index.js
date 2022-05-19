@@ -1,5 +1,6 @@
 import React from "react";
 import { useRoutes, Navigate } from 'react-router-dom';
+import Login from "../pages/Login";
 
 export default function Router() {
   return useRoutes([
@@ -7,7 +8,7 @@ export default function Router() {
       path: '/', element: <Navigate to='/login' replace/>,
     },
     {
-      path: '/login', element: <></>,
+      path: '/login', element: <Login />,
     }
   ]);
 }
