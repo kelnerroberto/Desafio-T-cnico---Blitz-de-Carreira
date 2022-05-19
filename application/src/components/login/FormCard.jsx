@@ -18,6 +18,7 @@ const FormCard = () => {
 
   const handleLoginClick = () => {
     localStorage.setItem('user', JSON.stringify({ name, email, password }));
+    localStorage.setItem('todos', JSON.stringify([{ id: 1, body: 'First item' }]));
     navigate('/home/todolist');
   }
 
