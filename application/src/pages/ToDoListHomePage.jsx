@@ -4,7 +4,7 @@ import Header from '../components/main/Header';
 
 export default function ToDoListHomePage() {
   return (
-    <Flex>
+    <Flex height='100vh' justifyContent='center'>
       <Header />
     </Flex>
   )
