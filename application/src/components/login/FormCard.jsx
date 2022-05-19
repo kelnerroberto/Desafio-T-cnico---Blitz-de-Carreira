@@ -13,7 +13,7 @@ const FormCard = () => {
   const navigate = useNavigate();
 
   const { toggleColorMode } = useColorMode();
-  const formBg = useColorModeValue("gray.100", "gray.700");
+  const formBg = useColorModeValue("blackAlpha.200", "blackAlpha.700");
 
   const handleLoginClick = () => {
     localStorage.setItem('user', JSON.stringify({ email, password }));
@@ -48,7 +48,7 @@ const FormCard = () => {
       >
         Log in
       </Button>
-      <Button onClick={toggleColorMode}>Dark mode?</Button>
+      <Button onClick={toggleColorMode} >Dark mode?</Button>
     </Flex>
   )
 }
