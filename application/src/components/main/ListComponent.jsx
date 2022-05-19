@@ -1,20 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import { Text, VStack, HStack, StackDivider, IconButton, Spacer } from '@chakra-ui/react'
 import { FaTrash } from 'react-icons/fa';
+import { ToDoContext } from '../../context/ToDoProvider';
 
 export default function ListComponent() {
-  const [todos, setTodos] = useState([]);
-
-  useEffect(() => {
-    setTodos(JSON.parse(localStorage.getItem('todos')))
-  }, []);
+  const { todos, setToDos } = useContext(ToDoContext);
 
   const deleteToDo = (id) => {
     const newToDoList = todos.filter(eachOfList => {
       eachOfList.id !== id
     });
-    setTodos(newToDoList);
-    localStorage.setItem('todos', JSON.stringify(newToDoList));
+    setToDos(newToDoList);
   }
 
   return(

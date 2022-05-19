@@ -2,6 +2,7 @@ import React from "react";
 import { useRoutes, Navigate } from 'react-router-dom';
 import Login from "../pages/Login";
 import ToDoListHomePage from "../pages/ToDoListHomePage";
+import { ToDoProvider } from "../context/ToDoProvider";
 
 export default function Router() {
   return useRoutes([
@@ -12,7 +13,7 @@ export default function Router() {
       path: '/login', element: <Login />,
     },
     {
-      path: '/home/todolist', element: <ToDoListHomePage />,
+      path: '/home/todolist', element: (<ToDoProvider><ToDoListHomePage /></ToDoProvider>),
     }
   ]);
 }
