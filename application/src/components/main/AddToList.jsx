@@ -5,7 +5,7 @@ export default function AddToList() {
   return(
     <Flex p={8}>
       <HStack>
-        <Input />
+        <Input variant='filled' placeholder='My next task'/>
         <Button>Add task</Button>
       </HStack>
     </Flex>
